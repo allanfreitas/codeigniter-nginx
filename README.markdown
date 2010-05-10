@@ -6,6 +6,10 @@ This setup has 2 goals in mind:
 * **Easy Updates**: Updating the CodeIgniter core code is just a matter of replacing the "system" folder.
     * _It's unlikely that CodeIgniter's index.php file will change, but keep an eye on it_
 
+The `example.com` nginx config provided is a base config for you to edit and expand upon.
+
+If you have any suggestions or problems please [raise an issue](https://github.com/chrisgaunt/codeigniter-nginx/issues).
+
 ### Assumptions ###
 
 * Web sites are stored in `/var/www/sites/`
@@ -28,7 +32,7 @@ The folder structure used is as follows:
 					shared/
 						logs/
 
-The reason for the `shared` & `current` folders is because I use [Capistrano](http://www.capify.org) for deployment. However, having a `current` and `shared` folder is still beneficial if you are not using Capistrano. The reasons being:
+The reason for the `current` & `shared` folders is because I use [Capistrano](http://www.capify.org) for deployment. However, having a `current` & `shared` folder is still beneficial if you are not using Capistrano. The reasons being:
 
 * You can keep your nginx logs, CodeIgniter logs, and any other logs relating to each site in their own `shared/logs` folder.
 * When updating CodeIgniter, you can just delete the `system` folder and copy a new one in its place without worry of deleting log files.
