@@ -1,12 +1,12 @@
 CodeIgniter Nginx Configuration
 --------------------------------
+The `example.com` nginx config provided is a base config for you to edit and expand upon.
+
 This setup has 2 goals in mind:
 
 * **Security**: Share only the index.php front controller on the web, not the entire source code and configs.  
 * **Easy Updates**: Updating the CodeIgniter core code is just a matter of replacing the "system" folder.
     * _It's unlikely that CodeIgniter's index.php file will change, but keep an eye on it_
-
-The `example.com` nginx config provided is a base config for you to edit and expand upon.
 
 If you have any suggestions or problems please [raise an issue](https://github.com/chrisgaunt/codeigniter-nginx/issues).
 
