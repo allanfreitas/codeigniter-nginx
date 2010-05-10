@@ -20,15 +20,13 @@ Start in the base folder of the CodeIgniter install, with the following default 
 	license.txt
 	system/
 		application/
-			...
 	user_guide/
 
 Create a "public" folder
 
 Move index.php into the public folder
 
-Create an "assets" folder in the public folder.
-Stick all your CSS, JS and images into this folder
+Create an "assets" folder in the public folder. _Stick all your CSS, JS and images into this folder_
 
 Move the system/application folder outside of the system folder
 
@@ -37,14 +35,11 @@ Our folder structure should now look like this:
 	license.txt
 	public/
 		assets/
-			index.php
-			system/
-			user_guide/
+		index.php
+	system/
+	user_guide/
 
 Now to update the CodeIgniter config:
-
-Open public/index.php
-
-Change $system\_folder to "../system"
-
-Change $application\_folder to "../application"
+* Edit public/index.php
+    * Change $system\_folder to "../system"
+    * Change $application\_folder to "../application"
