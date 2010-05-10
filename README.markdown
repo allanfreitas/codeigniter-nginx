@@ -42,12 +42,13 @@ Simply put, `current` is for code and `shared` is for anything created by the co
 For the above to work, I symlink `/var/www/sites/example.com/current/system/logs/` to `/var/www/sites/example.com/shared/logs/`, which is explained below.
 
 ## Instructions ##
+
 ### Setup ###
 First we need to setup our folder structure:
 
 	sudo mkdir -p /var/www/sites/example.com/{current,shared}
 
-Now copy your CodeIgniter files into `/var/www/sites/example.com/current/`
+Now upload/copy your CodeIgniter files into `/var/www/sites/example.com/current/`
 
 Let's work in the `current` folder and list the files within:
 
@@ -106,11 +107,11 @@ Edit your application config:
 
 Make the following changes:
 
-	$config['uri\_protocol'] = "PATH_INFO";
+	$config['uri_protocol'] = "PATH_INFO";
 
 ### Symlink logs ###
 First move the `system/logs` folder and remove the `index.html` file since we don't need it:  
-_In fact, we don't need any of the index.html files spread across the CodeIgniter code, since none of the folders are made public, but it's not worth the effort to remove them all_
+_In fact, we don't need any of the index.html files spread across the CodeIgniter code, since none of the folders are made public, but it's not worth the effort to remove them all._
 
 	mv system/logs ../shared/logs
 	rm ../shared/logs/index.html
@@ -120,3 +121,8 @@ Now create the symlink:
 	ln -nfs /var/www/sites/example.com/shared/logs/ /var/www/sites/example.com/current/system/
 
 Note that if you delete the `system` folder during an update you must create the `system/logs` symlink again.
+
+### Extra Notes ###
+For my setup, nginx runs as the **www-data** user. This user should own the `/var/www/sites` folder. So run the following command:
+
+	sudo chown www-data:www-data -R /var/www/sites
