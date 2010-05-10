@@ -13,28 +13,28 @@ For a basic CodeIgniter app this should do the job.
 Instructions
 -------------
 First we need to make the following changes to our CodeIgniter folder structure:
-	* Start in the base folder of the CodeIgniter install, with the following default structure:
-		* index.php
-		* license.txt
-		* system/
-			* application/
-			* ...
-		* user\_guide/
-	* Create a "public" folder
-	* Move index.php into the public folder
-	* Create an "assets" folder in the public folder.
-		* Stick all your CSS, JS and images into this folder
-	* Move the system/application folder outside of the system folder
-	* Our folder structure should now look like this:
-		* application/
-		* license.txt
-		* public/
-			* assets/
-			* index.php
-		* system/
-		* user\_guide/
+ * Start in the base folder of the CodeIgniter install, with the following default structure:
+     * index.php
+     * license.txt
+     * system/
+          * application/
+               * ...
+     * user\_guide/
+ * Create a "public" folder
+ * Move index.php into the public folder
+ * Create an "assets" folder in the public folder.
+     * Stick all your CSS, JS and images into this folder
+ * Move the system/application folder outside of the system folder
+ * Our folder structure should now look like this:
+     * application/
+     * license.txt
+     * public/
+          * assets/
+          * index.php
+     * system/
+     * user\_guide/
 
 Now to update the CodeIgniter config:
-	* Open public/index.php
-	* Change $system\_folder to "../system"
-	* Change $application\_folder to "../application"
+ * Open public/index.php
+ * Change $system\_folder to "../system"
+ * Change $application\_folder to "../application"
