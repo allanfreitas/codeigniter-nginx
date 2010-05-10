@@ -40,9 +40,8 @@ Our folder structure should now look like this:
 	user_guide/
 
 Update folder paths
------------------
-Now make the following changes to the CodeIgniter front controller (public/index.php)
+--------------------
+Now make the following changes to the CodeIgniter front controller (**public/index.php**)
 
 	$system_folder = "../system";
-
 	$application_folder = "../application";
