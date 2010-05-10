@@ -4,6 +4,7 @@ This setup has 2 goals in mind:
 
 * **Security**: Share only the index.php front controller on the web, not the entire source code and configs.  
 * **Easy Updates**: Updating the CodeIgniter core code is just a matter of replacing the "system" folder.
+    * _It's unlikely that CodeIgniter's index.php file will change, but keep an eye on it_
 
 **Assumptions**  
 _Adjust accordingly_
