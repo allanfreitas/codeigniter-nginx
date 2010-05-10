@@ -40,6 +40,7 @@ Our folder structure should now look like this:
 	user_guide/
 
 Now to update the CodeIgniter config:
- * Edit public/index.php
+
+* Edit public/index.php
      * Change $system\_folder to "../system"
      * Change $application\_folder to "../application"
