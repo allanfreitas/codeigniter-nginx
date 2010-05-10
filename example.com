@@ -19,8 +19,8 @@ server {
 	}
 
 	# Do not allow direct access to the CodeIgniter front controller
-	location = /index.php {
-		rewrite ^(.*)$ / permanent;
+	location ~* ^/index.php {
+		rewrite ^/index.php/?(.*)$ /$1 permanent;
 	}
 
 	# CodeIgniter Front Controller
@@ -34,7 +34,7 @@ server {
 	}
 
 	# If directly accessing a PHP file in the public dir other than index.php
-	location ~ \.php$ {
+	location ~* \.php$ {
 		root /var/www/sites/example.com/current/public;
 		try_files $uri @codeigniter;
 		fastcgi_pass 127.0.0.1:9000;

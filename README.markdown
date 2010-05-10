@@ -1,5 +1,4 @@
-CodeIgniter Nginx Configuration
---------------------------------
+# CodeIgniter Nginx Configuration #
 The `example.com` nginx config provided is a base config for you to edit and expand upon.
 
 This setup has 2 goals in mind:
@@ -10,7 +9,7 @@ This setup has 2 goals in mind:
 
 If you have any suggestions or problems please [raise an issue](https://github.com/chrisgaunt/codeigniter-nginx/issues).
 
-### Assumptions ###
+## Assumptions ##
 
 * Web sites are stored in `/var/www/sites/`
 * The domain name is "example.com"
@@ -18,7 +17,7 @@ If you have any suggestions or problems please [raise an issue](https://github.c
 
 _Adjust the instructions below accordingly_
 
-### `current` & `shared` Folders Explained ###
+## `current` & `shared` Folders Explained ##
 The folder structure used is as follows:
 
 	var/
@@ -42,8 +41,7 @@ Simply put, `current` is for code and `shared` is for anything created by the co
 
 For the above to work, I symlink `/var/www/sites/example.com/current/system/logs/` to `/var/www/sites/example.com/shared/logs/`, which is explained below.
 
-Instructions
--------------
+## Instructions ##
 ### Setup ###
 First we need to setup our folder structure:
 
