@@ -13,12 +13,12 @@ server {
 		break;
 	}
 
-	# Serve the directoy/file if it exists, else pass to CodeIgniter index.php
+	# Serve the directoy/file if it exists, else pass to CodeIgniter front controller
 	location / {
 		try_files $uri @codeigniter;
 	}
 
-	# Do not allow direct access of the CodeIgniter front controller
+	# Do not allow direct access to the CodeIgniter front controller
 	location = /index.php {
 		rewrite ^(.*)$ / permanent;
 	}
@@ -30,8 +30,6 @@ server {
 		fastcgi_pass 127.0.0.1:9000;
 		fastcgi_index index.php;
 		fastcgi_param SCRIPT_FILENAME /var/www/sites/example.com/current/public/index.php;
-		fastcgi_split_path_info ^(.+\.php)(.*)$;
-		fastcgi_param	 PATH_INFO $fastcgi_path_info;
 		include fastcgi_params;
 	}
 
