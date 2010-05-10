@@ -40,6 +40,7 @@ For the above to work, I symlink `/var/www/sites/example.com/current/system/logs
 
 Instructions
 -------------
+**Setup**  
 First we need to setup our folder structure:
 
 	mkdir -p /var/www/sites/example.com/{current,shared}
@@ -59,6 +60,7 @@ The default structure looks like this:
 		application/
 	user_guide/
 
+**Folder Structure**  
 Create a `public` folder:
 
 	mkdir public
@@ -86,8 +88,7 @@ Our folder structure should now look like this:
 	system/
 	user_guide/
 
-Update folder paths
---------------------
+**CodeIgniter paths**  
 Edit the CodeIgniter front controller:
 
 	nano public/index.php
