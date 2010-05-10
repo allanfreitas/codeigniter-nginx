@@ -28,7 +28,7 @@ The folder structure used is as follows:
 					shared/
 						logs/
 
-The reason for the shared & current folders is because I use [Capistrano](http://www.capify.org) for deployment. However, having a current and shared folder is still beneficial if you are not using Capistrano. The reasons being:
+The reason for the `shared` & `current` folders is because I use [Capistrano](http://www.capify.org) for deployment. However, having a `current` and `shared` folder is still beneficial if you are not using Capistrano. The reasons being:
 
 * You can keep your nginx logs, CodeIgniter logs, and any other logs relating to each site in their own `shared/logs` folder.
 * When updating CodeIgniter, you can just delete the `system` folder and copy a new one in its place without worry of deleting log files.
