@@ -14,7 +14,11 @@ Instructions
 -------------
 First we need to make the following changes to our CodeIgniter folder structure:
 
-Start in the base folder of the CodeIgniter install, with the following default structure:
+Start in the base folder of the CodeIgniter install:
+
+	cd /path/to/your/codeigniter/folder/
+
+The default structure looks like this:
 
 	index.php
 	license.txt
@@ -24,13 +28,22 @@ Start in the base folder of the CodeIgniter install, with the following default 
 
 Create a "public" folder
 
+	mkdir public
+
 Move index.php into the public folder
 
-Create an "assets" folder in the public folder. _Stick all your CSS, JS and images into this folder_
+	mv index.php public/
+
+Create an "assets" folder in the public folder. _Put all your CSS, JS and images into this folder_
+
+	mkdir public/assets
 
 Move the system/application folder outside of the system folder
 
+	mv system/application/ application
+
 Our folder structure should now look like this:
+
 	application/
 	license.txt
 	public/
@@ -41,7 +54,11 @@ Our folder structure should now look like this:
 
 Update folder paths
 --------------------
-Now make the following changes to the CodeIgniter front controller (**public/index.php**)
+Open the CodeIgniter front controller
+
+	nano public/index.php
+
+Make the following changes:
 
 	$system_folder = "../system";
 	$application_folder = "../application";
