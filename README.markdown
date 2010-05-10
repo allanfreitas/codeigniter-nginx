@@ -39,39 +39,10 @@ Our folder structure should now look like this:
 	system/
 	user_guide/
 
-Now to update the CodeIgniter config:
-
-public/index.php
+Update folder paths
 -----------------
-	...
-	/*
-	|---------------------------------------------------------------
-	| SYSTEM FOLDER NAME
-	|---------------------------------------------------------------
-	|
-	| This variable must contain the name of your "system" folder.
-	| Include the path if the folder is not in the same  directory
-	| as this file.
-	|
-	| NO TRAILING SLASH!
-	|
-	*/
-		$system_folder = "../system";
+Now make the following changes to the CodeIgniter front controller (public/index.php)
 
-	/*
-	|---------------------------------------------------------------
-	| APPLICATION FOLDER NAME
-	|---------------------------------------------------------------
-	|
-	| If you want this front controller to use a different "application"
-	| folder then the default one you can set its name here. The folder 
-	| can also be renamed or relocated anywhere on your server.
-	| For more info please see the user guide:
-	| http://codeigniter.com/user_guide/general/managing_apps.html
-	|
-	|
-	| NO TRAILING SLASH!
-	|
-	*/
-		$application_folder = "../application";
-	...
+	$system_folder = "../system";
+
+	$application_folder = "../application";
