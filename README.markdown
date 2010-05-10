@@ -41,5 +41,5 @@ Our folder structure should now look like this:
 
 Now to update the CodeIgniter config:
 * Edit public/index.php
-    * Change $system\_folder to "../system"
-    * Change $application\_folder to "../application"
+     * Change $system\_folder to "../system"
+     * Change $application\_folder to "../application"
