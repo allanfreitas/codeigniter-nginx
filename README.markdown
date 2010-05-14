@@ -107,7 +107,7 @@ Edit your application config:
 
 Make the following changes:
 
-	$config['uri_protocol'] = "PATH_INFO";
+	$config['uri_protocol'] = "REQUEST_URI";
 
 ### Symlink logs ###
 First move the `system/logs` folder and remove the `index.html` file since we don't need it:  
