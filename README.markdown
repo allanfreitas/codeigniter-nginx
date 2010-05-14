@@ -1,5 +1,9 @@
 # CodeIgniter Nginx Configuration #
-The `example.com` nginx config provided is a base config for you to edit and expand upon.
+The following files are included:
+
+* `example.com` - a base nginx config for you to edit and expand upon.
+* `fastcgi_config` - my default fastcgi configuration, solves the 'too big header' issue with default fastcgi config.
+* `fastcgi_params` - default nginx fastcgi params.
 
 This setup has 2 goals in mind:
 
