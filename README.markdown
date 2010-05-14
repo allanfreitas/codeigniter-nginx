@@ -107,6 +107,7 @@ Edit your application config:
 
 Make the following changes:
 
+	$config['index_page'] = "";
 	$config['uri_protocol'] = "REQUEST_URI";
 
 ### Symlink logs ###
